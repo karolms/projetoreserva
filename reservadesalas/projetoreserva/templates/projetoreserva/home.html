@@ -2,14 +2,15 @@
 {% block content %}
 	{% for info in info %}
 		<article class="media content-section">
-			  <div class="media-body">
+			<img class="rounded-circle article-img" src="{{ info.author.profile.image.url }}">
+			<div class="media-body">
 			    <div class="article-metadata">
 			      <a class="mr-2" href="#">{{ info.author }}</a>
 			      <small class="text-muted">{{ info.date_posted|date:"F d, Y" }}</small>
 			    </div>
-			    <h2><a class="article-title" href="#">{{ info.title }}</a></h2>
+			    <h2><a class="article-title" href="{% url 'info-detail' info.id %}">{{ info.title }}</a></h2>
 			    <p class="article-content">{{ info.content }}</p>
-			  </div>
+			</div>
 			</article>
 	{% endfor %}
 {% endblock content %}
