@@ -25,7 +25,7 @@ SECRET_KEY = '#-92#+$!lhga2-6p*z2+&e&&vfalw4!l@od)dh-c&e1@(zsh%4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['whispering-earth-65583.herokuapp.com']
 
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_AUTHENTICATION_METHOD = ("username_email")
