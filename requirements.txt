@@ -31,3 +31,4 @@ uritemplate==3.0.0
 urllib3==1.25.2
 django-heroku
 gunicorn
+whitenoise
