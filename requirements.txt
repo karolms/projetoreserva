@@ -4,3 +4,5 @@ pytz==2019.1
 django
 gunicorn
 django-heroku
+django-crispy-forms
+django-allauth
