@@ -1,1 +1,1 @@
-web: gunicorn reservadesalas/reservadesalas.wsgi --log-file -
+web: cd reservadesalas; gunicorn reservadesalas.wsgi --log-file -; cd ..
