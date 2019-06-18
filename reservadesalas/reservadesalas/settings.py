@@ -25,7 +25,7 @@ SECRET_KEY = '#-92#+$!lhga2-6p*z2+&e&&vfalw4!l@od)dh-c&e1@(zsh%4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['whispering-earth-65583.herokuapp.com']
+ALLOWED_HOSTS = ['whispering-earth-65583.herokuapp.com',  'localhost']
 
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_AUTHENTICATION_METHOD = ("username_email")
@@ -57,7 +57,8 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'allauth.socialaccount.providers.google'
+    'allauth.socialaccount.providers.google',
+    'rest_framework',
 ]
 
 SITE_ID = 1
@@ -128,6 +129,14 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
