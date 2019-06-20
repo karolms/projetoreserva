@@ -1,0 +1,66 @@
+info:
+  description: ''
+  title: ''
+  version: ''
+openapi: 3.0.0
+paths:
+  /users/:
+    get:
+      operationId: users_list
+      tags:
+      - users
+    post:
+      operationId: users_create
+      tags:
+      - users
+  /users/{id}/:
+    delete:
+      operationId: users_delete
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          description: A unique integer value identifying this user.
+          title: ID
+          type: integer
+      tags:
+      - users
+    get:
+      operationId: users_read
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          description: A unique integer value identifying this user.
+          title: ID
+          type: integer
+      tags:
+      - users
+    patch:
+      operationId: users_partial_update
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          description: A unique integer value identifying this user.
+          title: ID
+          type: integer
+      tags:
+      - users
+    put:
+      operationId: users_update
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          description: A unique integer value identifying this user.
+          title: ID
+          type: integer
+      tags:
+      - users
+servers:
+- url: ''

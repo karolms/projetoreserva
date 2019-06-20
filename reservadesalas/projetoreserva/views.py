@@ -31,6 +31,7 @@ class InfoCreateView(LoginRequiredMixin, CreateView):
 		return super().form_valid(form)
 
 
+
 class InfoUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 	model = Info
 	fields = ['title', 'content']
